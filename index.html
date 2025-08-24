@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LingoMatch</title>
+</head>
+<body>
+  
+  <nav class="navbar">
+    <div class="logo">LingoMatch</div>
+    <div class="nav-links">
+      <a href="#login">Iniciar sesión</a>
+      <a href="#app">Demo</a>
+    </div>
+  </nav>
+
+ 
+  <header class="hero">
+    <h1>Aprende idiomas con <span>Inteligencia Artificial</span></h1>
+    <p>Práctica de conversación, correcciones en tiempo real y vocabulario adaptado a tu nivel.</p>
+    <a href="#login" class="btn">Comenzar ahora</a>
+  </header>
+
+  
+  <section id="login" class="auth">
+    <div class="tabs">
+      <button id="tabLogin" class="active">Ingresar</button>
+      <button id="tabSignup">Crear cuenta</button>
+    </div>
+
+    <form id="formLogin">
+      <label for="loginEmail">Correo</label>
+      <input type="email" id="loginEmail" placeholder="tu@correo.com" required>
+
+      <label for="loginPass">Contraseña</label>
+      <input type="password" id="loginPass" placeholder="••••••••" required>
+
+      <button type="submit" class="btn">Entrar</button>
+    </form>
+
+    
+    <form id="formSignup" class="hidden">
+      <label for="signName">Nombre</label>
+      <input type="text" id="signName" required>
+
+      <label for="signEmail">Correo</label>
+      <input type="email" id="signEmail" required>
+
+      <label for="signPass">Contraseña</label>
+      <input type="password" id="signPass" required minlength="6">
+
+      <button type="submit" class="btn">Crear cuenta</button>
+    </form>
+  </section>
+
+  
+  <main id="app" class="hidden">
+    <h2>Bienvenido/a, <span id="userName">Invitado</span></h2>
+    <button id="btnLogout" class="btn">Cerrar sesión</button>
+
+    
+    <section class="settings">
+      <label for="selectLang">Idioma a practicar</label>
+      <select id="selectLang">
+        <option value="en">Inglés</option>
+        <option value="es">Español</option>
+        <option value="fr">Francés</option>
+      </select>
+    </section>
+
+    
+    <section class="chat">
+      <div id="chatLog" class="chat-log"></div>
+      <div class="chat-input">
+        <input id="chatInput" placeholder="Escribe para practicar...">
+        <button id="btnSend" class="btn">Enviar</button>
+      </div>
+    </section>
+  </main>
+  
+</body>
+</html>
